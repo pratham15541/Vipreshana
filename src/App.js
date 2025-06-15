@@ -14,6 +14,7 @@ import AdminDashboard from './AdminDashboard';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ThemeProvider } from './context/ThemeContext';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/logindashboard" element={<LoginDashboard />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <ToastContainer
           position="top-right"
